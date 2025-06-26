@@ -1,0 +1,18 @@
+name: CI Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Print Message
+        run: echo "GitHub Actions works!"
+
+      - name: Run shell script
+        run: bash hello.sh
+
