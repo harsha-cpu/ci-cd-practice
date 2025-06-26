@@ -28,7 +28,7 @@ jobs:
     - name: Build and Push Docker image to ECR
       uses: docker/build-push-action@v5
       with:
-        context: .
+        context: ./ci-cd-python-demo
         push: true
         tags: ${{ secrets.ECR_REGISTRY }}/${{ secrets.ECR_REPOSITORY }}:latest
 
